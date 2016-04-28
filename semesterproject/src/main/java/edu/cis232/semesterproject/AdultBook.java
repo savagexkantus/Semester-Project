@@ -1,9 +1,10 @@
 package edu.cis232.semesterproject;
 
-public class AdultBook extends Book{
-	//REQ#6
+public class AdultBook extends Book implements Genre{
+	//REQ#6 and REQ #4
+	
 	boolean explicit;
-	public AdultBook(String title, int sku, int upc, String author, double price, double retailPrice, String genre, int quantity, boolean explicit){
+	public AdultBook(String title, String sku, String upc, String author, String price, String retailPrice, String genre, int quantity, boolean explicit){
 		super(title, sku, upc, author, price, retailPrice, genre, quantity);
 		this.explicit = explicit;
 	}
@@ -14,6 +15,13 @@ public class AdultBook extends Book{
 		else{
 			return "Fine for kids";
 		}
+	}
+	public String getGenre() {
+		return genre;
+	}
+	public void setGenre(String a) {
+		genre = a;
+		
 	}
 
 }
