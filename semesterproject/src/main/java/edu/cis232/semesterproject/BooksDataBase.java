@@ -3,14 +3,14 @@ package edu.cis232.semesterproject;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class BooksDataBase {
 	
-	public static void main( String[] args ) throws Exception
+	public static void main(String[] args) throws Exception
     {
-		
-    			final String DB_URL = "jdbc:hsqldb:file:BooksDB/Book";
+
+    			final String DB_URL = "jdbc:hsqldb:file:BooksDB/book";
 
     			try {
 
@@ -24,7 +24,7 @@ public class BooksDataBase {
 
     				conn.close();
     			} catch (Exception ex) {
-    				//System.out.println("ERROR: " + ex.getMessage());
+    				System.out.println("ERROR: " + ex.getMessage());
     			}
     		}
 
@@ -57,7 +57,7 @@ public class BooksDataBase {
 
     				// Title, Author, Retail Price, Quantity .
     				stmt.execute(
-    						"CREATE TABLE Books_Customer" + "( Title CHAR(30) NOT NULL PRIMARY KEY, " + "  Author CHAR(30)," + "  MSRB DOUBLE," + "  Quantity INT)");
+    						"CREATE TABLE Books_Customer" + "( Title CHAR(30) NOT NULL PRIMARY KEY, " + "  Author CHAR(30)," + "  MSRB CHAR(5)," + "  Quantity INT)");
 
     				
     				stmt.executeUpdate("INSERT INTO Books_Customer VALUES" + "('The Last Mile'," + "'David Baldacci'," + "'17.50',"+ "'3')");
@@ -80,14 +80,14 @@ public class BooksDataBase {
 
     				// Title, Author, UPC, SKU, Retail Price, Price bought, genre, Quantity  .
     				stmt.execute(
-    						"CREATE TABLE Books_Employee" + "( Title CHAR(30) NOT NULL PRIMARY KEY, " + "  Author CHAR(30)," + "  UPC CHAR(12)," + "  Sku CHAR(6)," + "  MSRB Double," + "  PB Double," + "  Genre CHAR(15),"+ "  Quantity INT)");
+    						"CREATE TABLE Books_Employee" + "( Title CHAR(30) NOT NULL PRIMARY KEY, " + "  Author CHAR(30)," + "  UPC CHAR(12)," + "  Sku CHAR(6)," + "  MSRB CHAR(5)," + "  PB CHAR(5)," + "  Genre CHAR(15),"+ "  Quantity INT)");
 
     				
-    				stmt.executeUpdate("INSERT INTO Books_Customer VALUES" + "('The Last Mile'," + "'David Baldacci'," + "'019287543251'," + "'128764'," + "'17.50'," + "'12.50'," + "'Adult'," + "'3')");
+    				stmt.executeUpdate("INSERT INTO Books_Employee VALUES" + "('The Last Mile'," + "'David Baldacci'," + "'019287543251'," + "'128764'," + "'17.50'," + "'12.50'," + "'Adult'," + "'3')");
 
-    				stmt.executeUpdate("INSERT INTO Books_Customer VALUES" + "('Fall of Light'," + "'Steven Erikson'," + "'902861428765'," + "'129071'," + "'19.99'," + "'14.00'," + "'Adult'," + "'0')");
+    				stmt.executeUpdate("INSERT INTO Books_Employee VALUES" + "('Fall of Light'," + "'Steven Erikson'," + "'902861428765'," + "'129071'," + "'19.99'," + "'14.00'," + "'Adult'," + "'0')");
 
-    				stmt.executeUpdate("INSERT INTO Books_Customer VALUES" + "('The Bazaar of Bad Dreams'," + "'Stephen King'," + "'029387776354'," + "'765499'," + "'9.50'," + "'8.50'," + "'Adult'," + "'5')");
+    				stmt.executeUpdate("INSERT INTO Books_Employee VALUES" + "('The Bazaar of Bad Dreams'," + "'Stephen King'," + "'029387776354'," + "'765499'," + "'9.50'," + "'8.50'," + "'Adult'," + "'5')");
 
 
     				System.out.println("Book Employee table created.");
