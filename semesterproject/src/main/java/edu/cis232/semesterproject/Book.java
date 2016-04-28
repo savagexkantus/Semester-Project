@@ -3,15 +3,15 @@ package edu.cis232.semesterproject;
 public class Book {
 	// REQ#5
 	String title;
-	int sku;
-	int upc;
+	String sku;
+	String upc;
 	String author;
-	double price;
-	double retailPrice;
+	String price;
+	String retailPrice;
 	String genre;
 	int quantity;
 	
-	public Book(String title, int sku, int upc, String author, double price, double retailPrice, String genre, int quantity){
+	public Book(String title, String sku, String upc, String author, String price, String retailPrice, String genre, int quantity){
 		this.title = title;
 		this.sku = sku;
 		this.upc = upc;
@@ -38,11 +38,43 @@ public class Book {
 		this.author = author;
 	}
 
-	public double getRetailPrice() {
+	public String getRetailPrice() {
 		return retailPrice;
 	}
 
-	public void setRetailPrice(double retailPrice) {
+	public void setRetailPrice(String retailPrice) {
 		this.retailPrice = retailPrice;
 	}
+	public String getSku() {
+		return sku;
+	}
+
+	public void setSku(String sku) {
+		this.sku = sku;
+	}
+
+	public String getUpc() {
+		return upc;
+	}
+
+	public void setUpc(String upc) {
+		this.upc = upc;
+	}
+
+	public String getPrice() {
+		return price;
+	}
+
+	public void setPrice(String price) {
+		this.price = price;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
 }
