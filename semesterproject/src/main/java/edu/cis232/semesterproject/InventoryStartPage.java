@@ -1,11 +1,16 @@
 package edu.cis232.semesterproject;
 
+import javafx.application.Application;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
-public class InventoryStartPage {
+public class InventoryStartPage extends Application {
 	
 
     @FXML
@@ -30,8 +35,34 @@ public class InventoryStartPage {
 
     @FXML
     void ClickEmployee() {
+    	try{
+    	 Stage stage1 = (Stage) buttonEmployee.getScene().getWindow();
+         stage1.close();
+    	}
+         catch(Exception e)
+         {
+        	 
+         }
+		try{
+			Stage stage = new Stage();
+			Parent parent = FXMLLoader.load(getClass().getResource("MenuEmployee.fxml"));
+			
+			Scene scene = new Scene(parent);
+			
+			stage.setTitle("Employee Menu");
+			stage.setScene(scene);
+			
+			stage.show();
+			
+		}
+		catch(Exception e)
+		{
+			
+		}
+		
+		
+	}
 
-    }
     
     @FXML
     void ClickCheck() {
@@ -54,6 +85,12 @@ public class InventoryStartPage {
     	}
 
     }
+
+	@Override
+	public void start(Stage arg0) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
 
 }
 

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="486.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.cis232.semesterproject.InventoryPage">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#106abe" height="48.0" stroke="BLACK" strokeType="INSIDE" width="600.0">
+         <effect>
+            <Bloom />
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4e51041a" height="345.0" layoutX="28.0" layoutY="127.0" stroke="BLACK" width="539.0" />
+      <Label layoutX="12.0" layoutY="8.0" text="Random House">
+         <font>
+            <Font name="Berlin Sans FB" size="28.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Label>
+      <TextField fx:id="textboxPassword" layoutX="87.0" layoutY="85.0" prefHeight="25.0" prefWidth="139.0" />
+      <Button fx:id="buttonEmployee" layoutX="14.0" layoutY="255.0" mnemonicParsing="false" onMouseClicked="#ClickEmployee" prefHeight="25.0" prefWidth="249.0" text="Employee" textFill="#070000" visible="false" />
+      <Label layoutX="10.0" layoutY="197.0" text="**Incorrect Password" textFill="#ff0b0b" visible="false" />
+      <ImageView fitHeight="31.0" fitWidth="54.0" layoutX="544.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@book.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="32.0" layoutX="237.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@check.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="87.0" layoutY="61.0" prefHeight="25.0" prefWidth="91.0" text="UPC or SKU:">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="26.0" fitWidth="25.0" layoutX="272.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@X.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="51.0" layoutX="7.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@back.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="166.0" layoutY="144.0" prefHeight="25.0" prefWidth="237.0">
+         <children>
+            <Label prefHeight="26.0" prefWidth="240.0" text="null">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Label layoutX="47.0" layoutY="145.0" text="Product Name:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="47.0" layoutY="185.0" text="Author:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="166.0" layoutY="184.0" prefHeight="26.0" prefWidth="240.0" text="null">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="47.0" layoutY="228.0" text="UPC:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="166.0" layoutY="226.0" prefHeight="26.0" prefWidth="154.0" text="null">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="332.0" layoutY="228.0" text="SKU:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="440.0" layoutY="226.0" prefHeight="26.0" prefWidth="126.0" text="null">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="47.0" layoutY="268.0" text="Retail Sold:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="166.0" layoutY="268.0" prefHeight="26.0" prefWidth="154.0" text="null">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="331.0" layoutY="270.0" text="Price Bought:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="439.0" layoutY="268.0" prefHeight="26.0" prefWidth="126.0" text="null">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="47.0" layoutY="307.0" text="Genre:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="166.0" layoutY="307.0" prefHeight="26.0" prefWidth="154.0" text="null">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="47.0" layoutY="348.0" text="Location:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="166.0" layoutY="348.0" prefHeight="26.0" prefWidth="154.0" text="null">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="47.0" layoutY="392.0" text="Quantity:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="166.0" layoutY="391.0" prefHeight="26.0" prefWidth="154.0" text="null">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
