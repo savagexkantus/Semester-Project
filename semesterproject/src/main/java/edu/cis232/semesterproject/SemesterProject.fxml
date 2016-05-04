@@ -41,7 +41,7 @@
             <Image url="@check.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="87.0" layoutY="61.0" prefHeight="25.0" prefWidth="91.0" text="UPC or SKU:">
+      <Label layoutX="87.0" layoutY="61.0" prefHeight="25.0" prefWidth="91.0" text="UPC:">
          <font>
             <Font name="Calibri" size="18.0" />
          </font>
@@ -51,7 +51,7 @@
             <Image url="@X.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="31.0" fitWidth="51.0" layoutX="7.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="backbutton" fitHeight="31.0" fitWidth="51.0" layoutX="7.0" layoutY="54.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@back.png" />
          </image>

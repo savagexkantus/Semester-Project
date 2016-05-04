@@ -32,6 +32,30 @@ public class InventoryStartPage extends Application {
 
     @FXML
     void ClickCustomer() {
+    	try{
+       	 Stage stage1 = (Stage) CustomerButton.getScene().getWindow();
+            stage1.close();
+       	}
+            catch(Exception e)
+            {
+           	 
+            }
+   		try{
+   			Stage stage = new Stage();
+   			Parent parent = FXMLLoader.load(getClass().getResource("MenuCustomer.fxml"));
+   			
+   			Scene scene = new Scene(parent);
+   			
+   			stage.setTitle("Customer Menu");
+   			stage.setScene(scene);
+   			
+   			stage.show();
+   			
+   		}
+   		catch(Exception e)
+   		{
+   			
+   		}
 
     }
 
