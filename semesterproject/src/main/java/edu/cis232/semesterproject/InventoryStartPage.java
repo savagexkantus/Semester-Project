@@ -9,6 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.scene.control.PasswordField;
 
 public class InventoryStartPage extends Application {
 	
@@ -20,7 +21,8 @@ public class InventoryStartPage extends Application {
     private Label IncorrectPassword;
 
     @FXML
-    private TextField textboxPassword;
+    private PasswordField textboxPassword;
+
 
     @FXML
     private Button buttonEmployee;
