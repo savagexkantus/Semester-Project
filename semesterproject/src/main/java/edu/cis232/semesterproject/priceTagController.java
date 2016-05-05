@@ -5,11 +5,13 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
+import javafx.application.Application;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
-public class priceTagController {
+public class priceTagController extends Application{
 	private static Label priceLabel;
 	private static Button priceButton;
 	private static TextField priceBox;
@@ -39,6 +41,12 @@ public class priceTagController {
 		} catch (Exception ex) {
 			System.out.println("ERROR: " + ex.getMessage());
 		}
+	}
+
+	@Override
+	public void start(Stage arg0) throws Exception {
+		// TODO Auto-generated method stub
+		
 	}
 		
 	
