@@ -1,7 +1,7 @@
 package edu.cis232.semesterproject;
 import java.util.StringTokenizer;
 public class PriceTag {
-	
+	// #REQ 2
 	public String tokenizer(String title, String retailPrice, String upc){
 		StringBuilder sb = new StringBuilder();
 		StringTokenizer st = new StringTokenizer(title);
