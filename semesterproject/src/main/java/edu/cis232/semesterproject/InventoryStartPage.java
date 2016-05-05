@@ -60,7 +60,7 @@ public class InventoryStartPage extends Application {
     }
 
     @FXML
-    void ClickEmployee() {
+    void ClickEmployee() throws Exception {
     	try{
     	 Stage stage1 = (Stage) buttonEmployee.getScene().getWindow();
          stage1.close();
@@ -69,9 +69,9 @@ public class InventoryStartPage extends Application {
          {
         	 
          }
-		try{
+		
 			Stage stage = new Stage();
-			Parent parent = FXMLLoader.load(getClass().getResource("MenuEmployee.fxml"));
+			Parent parent = FXMLLoader.load(getClass().getResource("SemesterProject.fxml"));
 			
 			Scene scene = new Scene(parent);
 			
@@ -80,11 +80,8 @@ public class InventoryStartPage extends Application {
 			
 			stage.show();
 			
-		}
-		catch(Exception e)
-		{
-			
-		}
+		
+		
 		
 		
 	}

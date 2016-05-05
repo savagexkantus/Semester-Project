@@ -28,7 +28,7 @@
             <InnerShadow />
          </effect>
       </Label>
-      <TextField fx:id="textboxPassword" layoutX="87.0" layoutY="85.0" prefHeight="25.0" prefWidth="139.0" />
+      <TextField fx:id="textboxSearch" layoutX="87.0" layoutY="85.0" prefHeight="25.0" prefWidth="139.0" />
       <Button fx:id="buttonEmployee" layoutX="14.0" layoutY="255.0" mnemonicParsing="false" onMouseClicked="#ClickEmployee" prefHeight="25.0" prefWidth="249.0" text="Employee" textFill="#070000" visible="false" />
       <Label layoutX="10.0" layoutY="197.0" text="**Incorrect Password" textFill="#ff0b0b" visible="false" />
       <ImageView fitHeight="31.0" fitWidth="54.0" layoutX="544.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
@@ -36,7 +36,7 @@
             <Image url="@book.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="31.0" fitWidth="32.0" layoutX="237.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="checkImage" fitHeight="31.0" fitWidth="32.0" layoutX="237.0" layoutY="80.0" onMouseClicked="#CheckButton" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@check.jpg" />
          </image>
@@ -46,7 +46,7 @@
             <Font name="Calibri" size="18.0" />
          </font>
       </Label>
-      <ImageView fitHeight="26.0" fitWidth="25.0" layoutX="272.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="clearImage" fitHeight="26.0" fitWidth="25.0" layoutX="272.0" layoutY="85.0" onMouseClicked="#ImageCleared" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@X.png" />
          </image>
@@ -58,94 +58,84 @@
       </ImageView>
       <VBox layoutX="166.0" layoutY="144.0" prefHeight="25.0" prefWidth="237.0">
          <children>
-            <Label prefHeight="26.0" prefWidth="240.0" text="null">
+            <Label fx:id="ProductName" prefHeight="26.0" prefWidth="240.0" text="null" visible="false">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
          </children>
       </VBox>
-      <Label layoutX="47.0" layoutY="145.0" text="Product Name:">
+      <Label fx:id="ProductNameLabel" layoutX="47.0" layoutY="145.0" text="Product Name:" visible="false">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="47.0" layoutY="185.0" text="Author:">
+      <Label fx:id="AuthorLabel" layoutX="47.0" layoutY="185.0" text="Author:" visible="false">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="166.0" layoutY="184.0" prefHeight="26.0" prefWidth="240.0" text="null">
+      <Label fx:id="Author" layoutX="166.0" layoutY="184.0" prefHeight="26.0" prefWidth="240.0" text="null" visible="false">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="47.0" layoutY="228.0" text="UPC:">
+      <Label fx:id="UPCLabel" layoutX="47.0" layoutY="228.0" text="UPC:" visible="false">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="166.0" layoutY="226.0" prefHeight="26.0" prefWidth="154.0" text="null">
+      <Label fx:id="UPC" layoutX="166.0" layoutY="226.0" prefHeight="26.0" prefWidth="154.0" text="null" visible="false">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="332.0" layoutY="228.0" text="SKU:">
+      <Label fx:id="SKULabel" layoutX="332.0" layoutY="228.0" text="SKU:" visible="false">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="440.0" layoutY="226.0" prefHeight="26.0" prefWidth="126.0" text="null">
+      <Label fx:id="SKU" layoutX="440.0" layoutY="226.0" prefHeight="26.0" prefWidth="126.0" text="null" visible="false">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="47.0" layoutY="268.0" text="Retail Sold:">
+      <Label fx:id="RetailSoldLabel" layoutX="47.0" layoutY="268.0" text="Retail Sold:" visible="false">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="166.0" layoutY="268.0" prefHeight="26.0" prefWidth="154.0" text="null">
+      <Label fx:id="RetailSold" layoutX="166.0" layoutY="268.0" prefHeight="26.0" prefWidth="154.0" text="null" visible="false">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="331.0" layoutY="270.0" text="Price Bought:">
+      <Label fx:id="PriceBoughtLabel" layoutX="331.0" layoutY="270.0" text="Price Bought:" visible="false">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="439.0" layoutY="268.0" prefHeight="26.0" prefWidth="126.0" text="null">
+      <Label fx:id="PriceB" layoutX="439.0" layoutY="268.0" prefHeight="26.0" prefWidth="126.0" text="null" visible="false">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="47.0" layoutY="307.0" text="Genre:">
+      <Label fx:id="GenreLabel" layoutX="47.0" layoutY="307.0" text="Genre:" visible="false">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="166.0" layoutY="307.0" prefHeight="26.0" prefWidth="154.0" text="null">
+      <Label fx:id="Genre" layoutX="166.0" layoutY="307.0" prefHeight="26.0" prefWidth="154.0" text="null" visible="false">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="47.0" layoutY="348.0" text="Location:">
+      <Label fx:id="QuantityLabel" layoutX="47.0" layoutY="345.0" text="Quantity:" visible="false">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="166.0" layoutY="348.0" prefHeight="26.0" prefWidth="154.0" text="null">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Label>
-      <Label layoutX="47.0" layoutY="392.0" text="Quantity:">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Label>
-      <Label layoutX="166.0" layoutY="391.0" prefHeight="26.0" prefWidth="154.0" text="null">
+      <Label fx:id="Quantity" layoutX="166.0" layoutY="345.0" prefHeight="26.0" prefWidth="154.0" text="null" visible="false">
          <font>
             <Font size="16.0" />
          </font>

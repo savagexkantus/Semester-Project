@@ -1,7 +1,12 @@
 package edu.cis232.semesterproject;
 
 import java.awt.Rectangle;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
+import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,13 +15,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
-public class InventoryPage {
-
-    @FXML
-    private Rectangle Rectangleback;
+public class InventoryPage extends Application {
+	
 
     @FXML
     private TextField textboxSearch;
@@ -37,31 +39,94 @@ public class InventoryPage {
     private Label ProductName;
 
     @FXML
+    private Label ProductNameLabel;
+
+    @FXML
+    private Label AuthorLabel;
+
+    @FXML
     private Label Author;
+
+    @FXML
+    private Label UPCLabel;
 
     @FXML
     private Label UPC;
 
     @FXML
+    private Label SKULabel;
+
+    @FXML
     private Label SKU;
+
+    @FXML
+    private Label RetailSoldLabel;
 
     @FXML
     private Label RetailSold;
 
     @FXML
+    private Label PriceBoughtLabel;
+
+    @FXML
     private Label PriceB;
+
+    @FXML
+    private Label GenreLabel;
 
     @FXML
     private Label Genre;
 
     @FXML
-    private Label Location;
+    private Label QuantityLabel;
 
     @FXML
     private Label Quantity;
 
     @FXML
     void CheckButton() {
+    	
+    	try{
+    		Quantity.setVisible(true);
+    		QuantityLabel.setVisible(true);
+    		Genre.setVisible(true);
+    		GenreLabel.setVisible(true);
+    		PriceB.setVisible(true);
+    		PriceBoughtLabel.setVisible(true);
+    		RetailSold.setVisible(true);
+    		RetailSoldLabel.setVisible(true);
+    		SKULabel.setVisible(true);
+    		UPC.setVisible(true);
+    		UPCLabel.setVisible(true);
+    		Author.setVisible(true);
+    		AuthorLabel.setVisible(true);
+    		ProductName.setVisible(true);
+    		ProductNameLabel.setVisible(true);
+    		
+    		final String DB_URL = "jdbc:hsqldb:file:BooksDB/book";
+    		
+    		Connection conn = DriverManager.getConnection(DB_URL);
+
+    		Statement statement = conn.createStatement();
+    		
+    		ResultSet results = statement
+					.executeQuery("SELECT * FROM Books_Employee WHERE UPC LIKE '" + textboxSearch.getText() + "';");
+			
+			while (results.next()) {
+				ProductName.setText(results.getString("Title"));
+				Author.setText(results.getString(2));
+				UPC.setText(results.getString(3));
+				SKU.setText(results.getString(4));
+				RetailSold.setText(results.getString(5));
+				PriceB.setText(results.getString(6));
+				Genre.setText(results.getString(7));
+				Quantity.setText(results.getString(8));
+			}
+    	}
+    	catch(Exception e)
+    	{
+    		System.out.println("Didn't work bruh");
+    	}
 
     }
 
@@ -74,6 +139,7 @@ public class InventoryPage {
     void ImageCleared() {
 
     }
+
 
     @FXML
     void goBack() {
@@ -103,4 +169,10 @@ public class InventoryPage {
      		}
 
     }
+
+	@Override
+	public void start(Stage arg0) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
 }
