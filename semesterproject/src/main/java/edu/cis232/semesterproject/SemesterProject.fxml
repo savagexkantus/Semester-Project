@@ -140,5 +140,6 @@
             <Font size="16.0" />
          </font>
       </Label>
+      <Button fx:id="priceTag" layoutX="386.0" layoutY="85.0" mnemonicParsing="false" onMouseClicked="#PriceTagClicked" prefHeight="25.0" prefWidth="139.0" text="Make Price Tag" />
    </children>
 </AnchorPane>

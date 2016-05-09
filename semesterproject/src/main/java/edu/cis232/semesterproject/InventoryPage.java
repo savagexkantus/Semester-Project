@@ -1,6 +1,5 @@
 package edu.cis232.semesterproject;
 
-import java.awt.Rectangle;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -18,8 +17,12 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 public class InventoryPage extends Application {
+	//Employee inventory page
 	
+    @FXML
+    private Button priceTag;
 
+ 
     @FXML
     private TextField textboxSearch;
 
@@ -96,6 +99,7 @@ public class InventoryPage extends Application {
     		RetailSold.setVisible(true);
     		RetailSoldLabel.setVisible(true);
     		SKULabel.setVisible(true);
+    		SKU.setVisible(true);
     		UPC.setVisible(true);
     		UPCLabel.setVisible(true);
     		Author.setVisible(true);
@@ -167,7 +171,35 @@ public class InventoryPage extends Application {
      		{
      			
      		}
+     		
 
+    }
+    @FXML
+    void PriceTagClicked() {
+    	try{
+        	 Stage stage1 = (Stage) priceTag.getScene().getWindow();
+             stage1.close();
+        	}
+             catch(Exception e)
+             {
+            	 
+             }
+    		try{
+    			Stage stage = new Stage();
+    			Parent parent = FXMLLoader.load(getClass().getResource("Pricetag.fxml"));
+    			
+    			Scene scene = new Scene(parent);
+    			
+    			stage.setTitle("Price Tag Maker");
+    			stage.setScene(scene);
+    			
+    			stage.show();
+    			
+    		}
+    		catch(Exception e)
+    		{
+    			System.out.println(e);
+    		}
     }
 
 	@Override

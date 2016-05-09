@@ -1,5 +1,7 @@
 package edu.cis232.semesterproject;
 
+import java.util.concurrent.TimeoutException;
+
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +14,7 @@ import javafx.stage.Stage;
 import javafx.scene.control.PasswordField;
 
 public class InventoryStartPage extends Application {
-	
+	//First Page on load
 
     @FXML
     private Button CustomerButton;
@@ -29,12 +31,14 @@ public class InventoryStartPage extends Application {
     
     @FXML
     private Button checkButton;
+    
 
     @FXML
     void ClickCustomer() {
     	try{
        	 Stage stage1 = (Stage) CustomerButton.getScene().getWindow();
             stage1.close();
+            IncorrectPassword.setText("**Incorrect Password");
        	}
             catch(Exception e)
             {
@@ -102,9 +106,16 @@ public class InventoryStartPage extends Application {
     	}
     	else
     	{
-    		IncorrectPassword.setVisible(true);
-    		buttonEmployee.setVisible(false);
-    		textboxPassword.setText("");
+    		try {
+				
+				IncorrectPassword.setVisible(true);
+	    		buttonEmployee.setVisible(false);
+	    		textboxPassword.setText("");
+	    		IncorrectPassword();
+			} catch (Exception e) {
+				
+			}
+    		
     	}
 
     }
@@ -114,6 +125,8 @@ public class InventoryStartPage extends Application {
 		// TODO Auto-generated method stub
 		
 	}
-
+	public static void IncorrectPassword() throws Exception{
+		throw new Exception("This is an Exception");
+	}
 }
 
