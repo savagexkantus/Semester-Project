@@ -86,6 +86,8 @@ public class BooksDataBase {
     				
     				stmt.executeUpdate("INSERT INTO Books_Customer VALUES" + "('Star Wars: Lost Stars'," + "'Claudia Gray'," + "'17.99'," + "'2')");
 
+    				stmt.executeUpdate("INSERT INTO Books_Customer VALUES" + "('Animal Farm'," + "'George Orwell'," + "'19.99'," + "'10')");
+
 
     				System.out.println("Books Customer Created table created.");
     			} catch (SQLException ex) {
@@ -128,6 +130,8 @@ public class BooksDataBase {
     				stmt.executeUpdate("INSERT INTO Books_Employee VALUES" + "('The Lost Key'," + "'Catherine Coulter'," + "'999999999999'," + "'11111'," + "'18.99'," + "'14.00'," + "'Adult'," + "'6')");
     				
     				stmt.executeUpdate("INSERT INTO Books_Employee VALUES" + "('Star Wars: Lost Stars'," + "'Claudia Gray'," + "'902684182765'," + "'210917'," + "'17.99'," + "'14.00'," + "'Adult'," + "'2')");
+
+    				stmt.executeUpdate("INSERT INTO Books_Employee VALUES" + "('Animal Farm'," + "'George Orwell'," + "'029684182765'," + "'021917'," + "'19.99'," + "'12.00'," + "'Adult'," + "'10')");
 
     				System.out.println("Book Employee table created.");
     			} catch (SQLException ex) {
