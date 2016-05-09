@@ -111,7 +111,6 @@ public class InventoryStartPage extends Application {
 				IncorrectPassword.setVisible(true);
 	    		buttonEmployee.setVisible(false);
 	    		textboxPassword.setText("");
-	    		IncorrectPassword();
 			} catch (Exception e) {
 				
 			}
@@ -124,9 +123,6 @@ public class InventoryStartPage extends Application {
 	public void start(Stage arg0) throws Exception {
 		// TODO Auto-generated method stub
 		
-	}
-	public static void IncorrectPassword() throws Exception{
-		throw new Exception("This is an Exception");
 	}
 }
 

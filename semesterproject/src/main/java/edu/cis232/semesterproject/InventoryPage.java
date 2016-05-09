@@ -175,15 +175,7 @@ public class InventoryPage extends Application {
 
     }
     @FXML
-    void PriceTagClicked() {
-    	try{
-        	 Stage stage1 = (Stage) priceTag.getScene().getWindow();
-             stage1.close();
-        	}
-             catch(Exception e)
-             {
-            	 
-             }
+    void PriceTagClicked() throws Exception {
     		try{
     			Stage stage = new Stage();
     			Parent parent = FXMLLoader.load(getClass().getResource("Pricetag.fxml"));
