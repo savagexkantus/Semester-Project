@@ -50,6 +50,32 @@ public class CustomerMenu extends Application{
 
     @FXML
     void ClickSearch() {
+    	
+    	try{
+        	 Stage stage1 = (Stage) backButton.getScene().getWindow();
+             stage1.close();
+        	}
+             catch(Exception e)
+             {
+            	 
+             }
+    		try{
+    			Stage stage = new Stage();
+    			Parent parent = FXMLLoader.load(getClass().getResource("CustomerBookSearch.fxml"));
+    			
+    			Scene scene = new Scene(parent);
+    			
+    			stage.setTitle("Main Menu");
+    			stage.setScene(scene);
+    			
+    			stage.show();
+    			
+    		}
+    		catch(Exception e)
+    		{
+    			
+    		}
+
 
     }
 
@@ -65,7 +91,8 @@ public class CustomerMenu extends Application{
 
     @FXML
     void SubmitButton() {
-
+    	
+  
     }
 
     @FXML
