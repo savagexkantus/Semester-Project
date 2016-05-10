@@ -164,6 +164,8 @@ public class InventoryPage extends Application {
 
     @FXML
     void ImageCleared() {
+    	
+    	textboxSearch.setText("");
 
     }
 

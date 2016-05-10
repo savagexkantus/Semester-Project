@@ -52,8 +52,10 @@ public class CustomerBookSearch {
     void ClickSearch() {
     	
     	try{
-    		
-    		System.out.print("Hello");
+    		bookTitle.setText("");
+    		authorTitle.setText("");
+    		priceTitle.setText("");
+    		quantityGenre.setText("");
     		final String DB_URL = "jdbc:hsqldb:file:BooksDB/book";
     		
     		Connection conn = DriverManager.getConnection(DB_URL);
@@ -62,13 +64,14 @@ public class CustomerBookSearch {
     		
     		ResultSet results;
     			results = statement
-    					.executeQuery("SELECT * FROM Books_Customer WHERE Title LIKE '%" + textBoxSearch.getText().trim() + "%';");
+    					.executeQuery("SELECT * FROM Books_Customer WHERE Title LIKE '" + textBoxSearch.getText() + "';");
     		
     		while (results.next()) {
     			bookTitle.setText(results.getString("Title").trim());
     			authorTitle.setText(results.getString(2).trim());
     			priceTitle.setText(results.getString(3));
     			quantityGenre.setText(results.getString(4));
+    			
     		
     	}
     	}catch(Exception e)

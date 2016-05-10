@@ -17,7 +17,7 @@ public class AdultBook extends Book implements Genre{
 		}
 	}
 	public String getGenre() {
-		return genre;
+		return "Adult";
 	}
 	public void setGenre(String a) {
 		genre = a;

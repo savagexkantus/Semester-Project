@@ -16,7 +16,7 @@ public class ChildrensBook extends Book implements Genre{
 		this.targetAge = targetAge;
 	}
 	public String getGenre() {
-		return "Children (" + targetAge + ")";
+		return "Children";
 	}
 	public void setGenre(String a) {
 		genre = "Children";
