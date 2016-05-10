@@ -90,22 +90,14 @@ public class InventoryPage extends Application {
     void CheckButton() {
     	
     	try{
-    		Quantity.setVisible(true);
-    		QuantityLabel.setVisible(true);
-    		Genre.setVisible(true);
-    		GenreLabel.setVisible(true);
-    		PriceB.setVisible(true);
-    		PriceBoughtLabel.setVisible(true);
-    		RetailSold.setVisible(true);
-    		RetailSoldLabel.setVisible(true);
-    		SKULabel.setVisible(true);
-    		SKU.setVisible(true);
-    		UPC.setVisible(true);
-    		UPCLabel.setVisible(true);
-    		Author.setVisible(true);
-    		AuthorLabel.setVisible(true);
-    		ProductName.setVisible(true);
-    		ProductNameLabel.setVisible(true);
+    		Quantity.setText("");
+    		Genre.setText("");
+    		PriceB.setText("");
+    		RetailSold.setText("");
+    		SKU.setText("");
+    		UPC.setText("");
+    		Author.setText("");
+    		ProductName.setText("");
     		
     		final String DB_URL = "jdbc:hsqldb:file:BooksDB/book";
     		
@@ -125,6 +117,37 @@ public class InventoryPage extends Application {
 				PriceB.setText(results.getString(6));
 				Genre.setText(results.getString(7));
 				Quantity.setText(results.getString(8));
+				
+				if(ProductName.getText().equals(""))
+				{
+		    		QuantityLabel.setVisible(false);
+		    		GenreLabel.setVisible(false);
+		    		PriceBoughtLabel.setVisible(false);
+		    		RetailSoldLabel.setVisible(false);
+		    		SKULabel.setVisible(false);
+		    		UPCLabel.setVisible(false);
+		    		AuthorLabel.setVisible(false);
+		    		ProductNameLabel.setVisible(false);
+				}
+				else
+				{
+					Quantity.setVisible(true);
+		    		QuantityLabel.setVisible(true);
+		    		Genre.setVisible(true);
+		    		GenreLabel.setVisible(true);
+		    		PriceB.setVisible(true);
+		    		PriceBoughtLabel.setVisible(true);
+		    		RetailSold.setVisible(true);
+		    		RetailSoldLabel.setVisible(true);
+		    		SKULabel.setVisible(true);
+		    		SKU.setVisible(true);
+		    		UPC.setVisible(true);
+		    		UPCLabel.setVisible(true);
+		    		Author.setVisible(true);
+		    		AuthorLabel.setVisible(true);
+		    		ProductName.setVisible(true);
+		    		ProductNameLabel.setVisible(true);
+				}
 			}
     	}
     	catch(Exception e)

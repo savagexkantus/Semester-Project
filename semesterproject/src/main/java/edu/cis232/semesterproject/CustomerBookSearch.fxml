@@ -12,7 +12,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="486.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.cis232.semesterproject.CustomerMenu">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="486.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.cis232.semesterproject.CustomerBookSearch">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#106abe" height="48.0" stroke="BLACK" strokeType="INSIDE" width="600.0">
          <effect>
@@ -76,7 +76,7 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="bookTitle" layoutX="425.0" layoutY="267.0" prefHeight="20.0" prefWidth="157.0" text="null">
+      <Label fx:id="bookTitle" layoutX="425.0" layoutY="267.0" prefHeight="20.0" prefWidth="157.0" text="null" visible="false">
          <font>
             <Font size="16.0" />
          </font>
@@ -91,37 +91,27 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="340.0" layoutY="361.0" text="Genre">
+      <Label layoutX="341.0" layoutY="362.0" text="Quantity">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="341.0" layoutY="394.0" text="Quantity">
+      <Label fx:id="authorTitle" layoutX="425.0" layoutY="296.0" prefHeight="20.0" prefWidth="157.0" text="null" visible="false">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="authorTitle" layoutX="425.0" layoutY="296.0" prefHeight="20.0" prefWidth="157.0" text="null">
+      <Label fx:id="priceTitle" layoutX="425.0" layoutY="328.0" prefHeight="20.0" prefWidth="157.0" text="null" visible="false">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="priceTitle" layoutX="425.0" layoutY="328.0" prefHeight="20.0" prefWidth="157.0" text="null">
+      <Label fx:id="quantityGenre" layoutX="425.0" layoutY="363.0" prefHeight="20.0" prefWidth="157.0" text="null" visible="false">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="genreTitle" layoutX="425.0" layoutY="361.0" prefHeight="20.0" prefWidth="157.0" text="null">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Label>
-      <Label fx:id="quantityGenre" layoutX="425.0" layoutY="394.0" prefHeight="20.0" prefWidth="157.0" text="null">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Label>
-      <Label fx:id="labelErrror" layoutX="413.0" layoutY="213.0" prefHeight="17.0" prefWidth="118.0" text="*BOOK NOT FOUND" textFill="RED">
+      <Label fx:id="labelErrror" layoutX="413.0" layoutY="213.0" prefHeight="17.0" prefWidth="118.0" text="*BOOK NOT FOUND" textFill="RED" visible="false">
          <font>
             <Font size="11.0" />
          </font>
