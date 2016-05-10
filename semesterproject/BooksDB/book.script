@@ -46,6 +46,7 @@ GRANT DBA TO SA
 SET SCHEMA SYSTEM_LOBS
 INSERT INTO BLOCKS VALUES(0,2147483647,0)
 SET SCHEMA PUBLIC
+INSERT INTO BOOKS_CUSTOMER VALUES('Animal Farm                             ','George Orwell                 ','19.99',10)
 INSERT INTO BOOKS_CUSTOMER VALUES('City of Lost Souls                      ','Cassandra Claire              ','20.99',3)
 INSERT INTO BOOKS_CUSTOMER VALUES('Dinosaurs Before Dark                   ','Mary Pope Osborn              ','10.99',5)
 INSERT INTO BOOKS_CUSTOMER VALUES('Fall of Light                           ','Steven Erikson                ','19.99',0)
@@ -59,6 +60,7 @@ INSERT INTO BOOKS_CUSTOMER VALUES('The Lost Key                            ','Ca
 INSERT INTO BOOKS_CUSTOMER VALUES('Thomas Jefferson and the Tripoli Pirates','Brian Kilmeade                ','22.99',2)
 INSERT INTO BOOKS_CUSTOMER VALUES('Thomas and Friends                      ','Thomas Tankengine             ','5.99 ',0)
 INSERT INTO BOOKS_CUSTOMER VALUES('Wilde Lake                              ','Laura Lippman                 ','19.99',3)
+INSERT INTO BOOKS_EMPLOYEE VALUES('Animal Farm                             ','George Orwell                 ','029684182765 ','021917','19.99','12.00','Adult          ',10)
 INSERT INTO BOOKS_EMPLOYEE VALUES('City of Lost Souls                      ','Cassandra Claire              ','902106428765 ','863251','20.99','15.20','Adult          ',3)
 INSERT INTO BOOKS_EMPLOYEE VALUES('Dinosaurs Before Dark                   ','Mary Pope Osborn              ','902861334765 ','120085','10.99','5.00 ','Children>6     ',5)
 INSERT INTO BOOKS_EMPLOYEE VALUES('Fall of Light                           ','Steven Erikson                ','902861428765 ','129071','19.99','14.00','Adult          ',0)
