@@ -1,7 +1,7 @@
 package edu.cis232.semesterproject;
 
 import java.util.concurrent.TimeoutException;
-
+import edu.cis232.semesterproject.*;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,7 +14,8 @@ import javafx.stage.Stage;
 import javafx.scene.control.PasswordField;
 
 public class InventoryStartPage extends Application {
-	//First Page on load
+	//First Page on load plus REQ 8 and 12
+	
 
     @FXML
     private Button CustomerButton;
@@ -24,7 +25,6 @@ public class InventoryStartPage extends Application {
 
     @FXML
     private PasswordField textboxPassword;
-
 
     @FXML
     private Button buttonEmployee;
@@ -83,39 +83,25 @@ public class InventoryStartPage extends Application {
 			stage.setScene(scene);
 			
 			stage.show();
-			
-		
-		
-		
-		
 	}
 
     
     @FXML
     void ClickCheck() {
-    	if(textboxPassword.getText().toLowerCase().trim().equals("semester"))
-    	{
-    		IncorrectPassword.setVisible(false);
-    		buttonEmployee.setVisible(true);
-    		textboxPassword.setText("");
-    	}
-    	else if(textboxPassword.getText().trim().length() < 1)
-    	{
-    		buttonEmployee.setVisible(false);
-    		textboxPassword.setText("");
-    	}
-    	else
-    	{
-    		try {
-				
-				IncorrectPassword.setVisible(true);
-	    		buttonEmployee.setVisible(false);
-	    		textboxPassword.setText("");
-			} catch (Exception e) {
-				
+    	try {
+			PasswordCheckerClass.checker(textboxPassword.getText().toLowerCase().trim());
+			{
+				IncorrectPassword.setVisible(false);
+				buttonEmployee.setVisible(true);
+				textboxPassword.setText("");
 			}
-    		
-    	}
+			
+		} catch (IllegalPasswordException e) {
+			IncorrectPassword.setVisible(true);
+			buttonEmployee.setVisible(false);
+			textboxPassword.setText("");
+			System.out.println("Your password sucks");
+		}
 
     }
 
@@ -124,5 +110,8 @@ public class InventoryStartPage extends Application {
 		// TODO Auto-generated method stub
 		
 	}
+	
 }
+
+
 

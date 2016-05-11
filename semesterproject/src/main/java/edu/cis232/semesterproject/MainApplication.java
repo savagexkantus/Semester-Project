@@ -7,7 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class MainApplication extends Application {
-
+// REQ 9
 	public static void main(String[] args) {
 			launch(args);
 		}
@@ -25,6 +25,8 @@ public class MainApplication extends Application {
 			
 			
 		}
+		
+		
 
 
 }
