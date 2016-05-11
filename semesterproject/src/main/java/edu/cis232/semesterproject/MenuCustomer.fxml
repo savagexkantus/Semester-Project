@@ -63,9 +63,9 @@
       <Line endY="-195.0" layoutX="424.0" layoutY="306.0" startY="180.0" strokeWidth="2.0" />
       <Line endY="-195.0" layoutX="190.0" layoutY="307.0" startY="180.0" strokeWidth="2.0" />
       <Label layoutX="445.0" layoutY="285.0" text="Test your book knowlegde" />
-      <Label layoutX="5.0" layoutY="68.0" prefHeight="141.0" prefWidth="208.0" text="Book of the Month" textAlignment="CENTER" wrapText="true">
+      <Label layoutX="13.0" layoutY="77.0" prefHeight="141.0" prefWidth="208.0" text="Book of the Month" textAlignment="CENTER" wrapText="true">
          <font>
-            <Font name="Freestyle Script" size="36.0" />
+            <Font name="Trebuchet MS" size="18.0" />
          </font>
       </Label>
       <ImageView fx:id="MonthImage" fitHeight="295.0" fitWidth="246.0" layoutX="5.0" layoutY="173.0" onMouseClicked="#ImageClicked" pickOnBounds="true" preserveRatio="true">

@@ -46,9 +46,9 @@
          </font>
       </Label>
       <TextField fx:id="textBoxSearch" layoutX="321.0" layoutY="169.0" prefHeight="25.0" prefWidth="208.0" promptText="ex. Harry Potter" />
-      <Label layoutX="5.0" layoutY="68.0" prefHeight="141.0" prefWidth="208.0" text="Book of the Month" textAlignment="CENTER" wrapText="true">
+      <Label layoutX="15.0" layoutY="76.0" prefHeight="141.0" prefWidth="208.0" text="Book of the Month" textAlignment="CENTER" wrapText="true">
          <font>
-            <Font name="Freestyle Script" size="36.0" />
+            <Font name="Times New Roman" size="18.0" />
          </font>
       </Label>
       <ImageView fx:id="MonthImage" fitHeight="295.0" fitWidth="246.0" layoutX="5.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">

@@ -1,7 +1,6 @@
-/*C1*/SET SCHEMA SYSTEM_LOBS
-INSERT INTO BLOCKS VALUES(0,2147483647,0)
-COMMIT
-/*C2*/SET SCHEMA PUBLIC
+/*C4*/SET SCHEMA PUBLIC
+DROP TABLE Books_Customer
+DROP TABLE Books_Employee
 CREATE TABLE Books_Customer( Title CHAR(40) NOT NULL PRIMARY KEY,   Author CHAR(30),  MSRB CHAR(5),  Quantity INT)
 INSERT INTO BOOKS_CUSTOMER VALUES('The Last Mile                           ','David Baldacci                ','17.50',3)
 COMMIT
